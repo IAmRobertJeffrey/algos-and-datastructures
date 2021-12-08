@@ -24,5 +24,6 @@ queueOfNames.enqueue("John")
 queueOfNames.enqueue("Tommy")
 queueOfNames.dequeue()
 queueOfNames.dequeue()
+queueOfNames.dequeue()
 
 console.log(queueOfNames);

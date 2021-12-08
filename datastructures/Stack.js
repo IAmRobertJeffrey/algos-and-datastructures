@@ -15,7 +15,7 @@ export default class Stack
 	{
 		if (this.collection.length > 0)
 		{
-			this.collection.splice(this.count - 1, 1)
+			this.collection.splice(-1, 1)
 			this.count--;
 		}
 	}
