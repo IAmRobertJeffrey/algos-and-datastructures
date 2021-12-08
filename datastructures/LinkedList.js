@@ -94,8 +94,6 @@ export default class LinkedList
 
 				currentNode = currentNode.next;
 			}
-
-
 		}
 		else
 		{
