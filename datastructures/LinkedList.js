@@ -1,4 +1,4 @@
-class LinkedList
+export default class LinkedList
 {
 
 	constructor()
@@ -76,6 +76,33 @@ class LinkedList
 			return
 		}
 	}
+	insertBefore(value, before)
+	{
+		const existingNode = this.find(before)
+		let currentNode = this.head;
+		if (existingNode)
+		{
+			while (currentNode)
+			{
+				if (currentNode.next.value === before)
+				{
+					const newNode = { value: value, next: before }
+					currentNode.next = newNode;
+					currentNode.next.next = existingNode
+					return;
+				}
+
+				currentNode = currentNode.next;
+			}
+
+
+		}
+		else
+		{
+			return
+		}
+		return
+	}
 
 	delete(value)
 	{
@@ -114,14 +141,13 @@ class LinkedList
 
 }
 
-
-const names = new LinkedList();
-names.append("Rob")
-names.append("Rob")
-names.append("Tom")
-names.append(2);
-names.prepend(5)
-names.delete("Rob")
-names.find("Tom")
-names.insertAfter("Inserted", 5)
-console.log(names.toArray());
+// const names = new LinkedList();
+// names.append("Rob")
+// names.append("Rob")
+// names.append("Tom")
+// names.append(2);
+// names.prepend(5)
+// names.delete("Rob")
+// names.find("Tom")
+// names.insertAfter("Inserted", 5)
+// console.log(names.toArray());
